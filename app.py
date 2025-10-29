@@ -15,16 +15,16 @@ def load_tokens(server):
 
 def get_headers(token):
     return {
-            "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 9; ASUS_Z01QD Build/PI)",
-            "Connection": "Keep-Alive",
-            "Accept-Encoding": "gzip",
-            "Authorization": f"Bearer {token}",
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Expect": "100-continue",
-            "X-Unity-Version": "2018.4.11f1",
-            "X-GA": "v1 1",
-            "ReleaseVersion": "OB50",
-        }
+    "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 9; ASUS_Z01QD Build/PI)",
+    "Connection": "Keep-Alive",
+    "Accept-Encoding": "gzip",
+    "Authorization": "Bearer {token}",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Expect": "100-continue",
+    "X-Unity-Version": "2018.4.11f1",
+    "X-GA": "v1 1",
+    "ReleaseVersion": "OB51" // Previously: OB50
+}
 
 def encrypt_message(data):
     cipher = AES.new(b'Yg&tc%DEuh6%Zc^8', AES.MODE_CBC, b'6oyZDr22E3ychjM%')
